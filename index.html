@@ -13,7 +13,7 @@
 	<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/themes/indigo-white.css">
+	<!-- <link rel="stylesheet" href="css/themes/indigo-white.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/green-white.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/red-white.css"> -->
 	<!-- <link rel="stylesheet" href="css/themes/grey-white.css"> -->
@@ -39,5 +39,16 @@
 			<!-- <a target="_blank" href="https://codepen.io"><i class="fab fa-codepen"></i></a> -->
     </div>
 	</main>
+	<script>
+		var themes = ['indigo-white', 'green-white', 'red-white', 'grey-white', 'white-indigo', 'white-blue', 'white-grey', 'white-red', 'yellow-black']
+		var theme = themes[Math.floor(Math.random() * themes.length)] + '.css';
+		var head  = document.getElementsByTagName('head')[0];
+		var link  = document.createElement('link');
+		link.rel  = 'stylesheet';
+		link.type = 'text/css';
+		link.href = 'css/themes/' + theme;
+		link.media = 'all';
+		head.appendChild(link);
+	</script>
 </body>
 </html>
